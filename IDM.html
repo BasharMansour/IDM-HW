@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Models Compairing </title>
+    <style>    
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 45px;
+            font-family: segoe print;
+        }
+        table {
+            width: 30%;
+            margin: 10px;
+            border-collapse: collapse;
+            float: left;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        th {
+            background-color: #4CAF50; 
+            color: white; 
+            padding: 10px;
+            font-size: 20px;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            background-color: #fff;
+        }
+        .comparison {
+
+            clear: both;
+            margin-top: 20px;
+            background-color: darkslategray;
+            color: rgba(255,255,255,255);
+            border: 1px solid #ddd;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        .highlight {
+            background-color: #f9f9f9; 
+        }
+    </style>
+</head>
+<body>
+
+<div>
+<h1><strong> Compairing </strong></h1>
+
+<table>
+    <tr ><th colspan="2">Logistic Regrission</th></tr>
+    <tr ><td class="highlight">Accuracy </td> <td> 22.9 </td></tr>
+    <tr ><td class="highlight">Micro Recall </td> <td>22.9</td> </tr>
+    <tr ><td class="highlight">Macro Recall </td> <td> 7.6</td> </tr>
+    <tr><td class="highlight">Weighted Recall </td> <td>22.9 </td> </tr>
+    <tr><td class="highlight">Micro Precision </td> <td>22.9 </td> </tr>
+    <tr><td class="highlight">Macro Precision </td> <td>3.1 </td> </tr>
+    <tr><td class="highlight">Weighted Precision </td><td>9.2  </td> </tr>
+    <tr><td class="highlight">Micro F1 </td> <td>22.9 </td> </tr>
+    <tr><td class="highlight">Macro F1 </td> <td> 4.2</td> </tr>
+    <tr><td class="highlight">Weighted F1 </td> <td> 12.6</td></tr>
+</table>
+
+<table>
+    <tr ><th colspan="2">Decision Tree</th></tr>
+    <tr ><td class="highlight">Accuracy </td> <td> 21.7 </td></tr>
+    <tr ><td class="highlight">Micro Recall </td> <td>21.7</td> </tr>
+    <tr ><td class="highlight">Macro Recall </td> <td>7.2</td> </tr>
+    <tr><td class="highlight">Weighted Recall </td> <td>21.7 </td> </tr>
+    <tr><td class="highlight">Micro Precision </td> <td>21.7 </td> </tr>
+    <tr><td class="highlight">Macro Precision </td> <td>3.1 </td> </tr>
+    <tr><td class="highlight">Weighted Precision </td><td>9.3  </td> </tr>
+    <tr><td class="highlight">Micro F1 </td> <td>21.7 </td> </tr>
+    <tr><td class="highlight">Macro F1 </td> <td> 3.6</td> </tr>
+    <tr><td class="highlight">Weighted F1 </td> <td>10.8</td></tr>
+</table>
+
+<table>
+    <tr ><th colspan="3">bayes </th></tr>
+    <tr ><td> </td> <td> Categorical </td><td> Numircal</td></tr>
+    <tr ><td class="highlight">Accuracy </td> <td> 34.2 </td><td> 20.6</td></tr>
+    <tr ><td class="highlight">Micro Recall </td> <td>34.2</td><td>20.6 </td> </tr>
+    <tr ><td class="highlight">Macro Recall </td> <td> 22.5</td><td> 7.3 </td> </tr>
+    <tr><td class="highlight">Weighted Recall </td> <td>34.2 </td><td> 20.6 </td> </tr>
+    <tr><td class="highlight">Micro Precision </td> <td>34.2 </td><td> 20.6 </td> </tr>
+    <tr><td class="highlight">Macro Precision </td> <td>90.5 </td> <td> 10.2 </td></tr>
+    <tr><td class="highlight">Weighted Precision </td><td>83.8  </td><td> 25.5 </td> </tr>
+    <tr><td class="highlight">Micro F1 </td> <td>34.2 </td> <td> 20.6 </td></tr>
+    <tr><td class="highlight">Macro F1 </td> <td> 28.0</td> <td> 2.9 </td></tr>
+    <tr><td class="highlight">Weighted F1 </td> <td> 32.5</td><td> 7.4 </td></tr>
+</table>
+
+<br><br><br><br><br><br>
+</div>
+
+<div class="comparison" dir="rtl" >
+
+    <h2 align="center" style="color: greenyellow;"> المقارنة </h2>
+    <p align="center" style="font-size: 20px;">
+        نلاحظ أن الموديلات الثلاثة قامت بتأدية عملها الصحيح في صناعة نموذج بين المدخلات والمخرجات إلا أن مقادير صحتها ودقتها اختلفت من  موديل إلى آخر  <br>
+        حيث كانت الدقة الأفضل في عقد بايز والتي قسمت إلى قسمين فئوي ورقمي ، ولابد أن القسم الفئوي كانت له نتائج أكثر دقة وتوقع أفضل للنموذج وهذا بديهي لأن أسلوب بايز تلافى العديد من المشكلات التي وقع بها موديل شجرة القرار  <br>
+        وكان أفضل تقييم حصلنا عليه في الموديلات الثلاث هو تققييم Macro Precision في موديل بايز 
+    </p>
+</div>
+
+
+
+</body>
+</html>
